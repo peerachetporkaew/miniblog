@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<article class="archive">
 {% for category in site.categories %}
   <h3>{{ category[0] }}</h3>
   <ul>
@@ -9,6 +10,7 @@ layout: default
     {% endfor %}
   </ul>
 {% endfor %}
+</article>
 
 {% if site.show_excerpts and page.name == "index.html" %}
 {% for page in paginator.posts %}
