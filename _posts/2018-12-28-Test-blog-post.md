@@ -1,3 +1,8 @@
+---
+title: "Test Blog Post"
+mathjax: true
+---
+
 # This is a test blog
 
 ![](assets/swiss-alps.jpg)
@@ -12,3 +17,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 print("But when you write code, it looks so beautiful")
 # I wish I could comment
 ```
+
+$$
+x = y + 10
+$$
+
