@@ -1,6 +1,6 @@
-title: "Blog title"
-author: "Funsuk Wangdu"
-description: "Your amazing blog should have a sassy description"
+title: "Peerachet's MiniBlog"
+author: "Peerachet Porkaew"
+description: "Welcome to my blog"
 
 # Jekyll settings
 permalink: /:title:output_ext # see https://jekyllrb.com/docs/permalinks/
@@ -22,7 +22,7 @@ navigation:                  # show navigation links in the header
 
 icons:                       # show icons in the header, for all possible icons see http://fontawesome.io/icons/
   envelope: "mailto:<user@mailid.com>"
-  github: "https://github.com/<username>/<repo>"
+  github: "https://github.com/peerachetporkaew/"
   rss: "/<repo>/feed.xml"
 
 comments:                    # embed disqus or isso comments
