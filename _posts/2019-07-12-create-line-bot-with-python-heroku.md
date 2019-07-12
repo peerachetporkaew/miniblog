@@ -1,5 +1,5 @@
 ---
-title: "มาสร้าง Line Bot ด้วยไพธอนบน Heroku กันเถอะ"
+title: "Build your LINE chatbot with Python and Heroku"
 mathjax: false
 comments : true
 layout: post
@@ -22,7 +22,7 @@ categories: Python
 
    หน้านี้ด้านล่างสุดจะเห็น QR Code สำหรับเผยแพร่ bot ของเราสามารถแอดเป็นเพื่อนได้
 
-2. GitHub Account และ Heroku Account ซึ่งเราจะ clone repository สำหรับ bot ของเราไว้ในนี้ แนะนำให้ทำเป็น Private เพื่อป้องกันไม่ใช้ API Key และ Access Token ของเรารั่วไหล https://www.github.com 
+2. GitHub Account และ Heroku Account ซึ่งเราจะ clone repository สำหรับ bot ของเราไว้ในนี้ แนะนำให้ทำเป็น Private เพื่อป้องกันไม่ใช้ API Key และ Access Token ของเรารั่วไหล 
 
     ในส่วนนี้ผมได้เตรียม repository เปล่าๆ เอาไว้แล้วที่ https://github.com/peerachetporkaew/line-bot-heroku-python 
 
@@ -32,7 +32,7 @@ categories: Python
 
     ซึ่งจะทำการสร้าง app ของเราบน Heroku ซึ่งจะลง environment ต่างๆ ไว้เรียบร้อย ณ ตรงนี้เราจะต้องแก้ไข secret key และ access token ซึ่งผมยังไม่มีวิธีแก้แบบโดยตรงจึงต้องทำแบบอ้อมๆ เอาครับ
 
-    วิธีการคือ Deploy to Heroku โดยตรงเลย ดูวิธีที่นี่ https://dashboard.heroku.com/apps/(YOUR-HEROKU-APP-NAME)/deploy/heroku-git ซึ่งจะพบว่ามีแจ้งว่าเรากำลัง clone empty repository ทั้งๆ ที่เราเพิ่มสร้างจาก template ของ github ขึ้นมา ตรงนี้เหมือนจะเป็นความไม่สมบูรณ์นะ 
+    วิธีการคือ Deploy to Heroku โดยตรงเลย ดูวิธีที่นี่ [https://dashboard.heroku.com/apps/(YOUR-HEROKU-APP-NAME)/deploy/heroku-git](https://dashboard.heroku.com/apps/(YOUR-HEROKU-APP-NAME)/deploy/heroku-git) ซึ่งจะพบว่ามีแจ้งว่าเรากำลัง clone empty repository ทั้งๆ ที่เราเพิ่มสร้างจาก template ของ github ขึ้นมา ตรงนี้เหมือนจะเป็นความไม่สมบูรณ์นะ 
 
     ผมเลยใช้วิธีแบบ manual เองเลยโดยการ clone มาลงใน local แล้วก๊อบไฟล์ไปวาง แล้ว commit / push ไปที่ heroku (อย่าลืมแก้ secret key ก่อน)
 
@@ -40,7 +40,7 @@ categories: Python
 
 3. ทดลองเรียกใช้ /home https://(YOUR-APP-NAME).herokuapp.com/home
 
-4. เชื่อม Fixie https://elements.heroku.com/addons/fixie
+4. เชื่อม [Fixie](https://elements.heroku.com/addons/fixie) https://elements.heroku.com/addons/fixie
 ![fixie](assets/linebot/fixie.png) ก็เป็นอันเรียบร้อย
 
 5. ทดลองแอด Line bot ได้เลย
