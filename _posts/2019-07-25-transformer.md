@@ -3,7 +3,7 @@ title: "ทำความรู้จักกับระบบแปลภา
 mathjax: true
 comments : true
 layout: post
-published: false
+published: true
 categories: NLP
 ---
 
