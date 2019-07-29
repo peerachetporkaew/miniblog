@@ -16,6 +16,7 @@ categories: Web Python
 
 ```python
 #!/usr/bin/env python
+# webshow_flask.py
 import sys
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import *
@@ -54,6 +55,7 @@ if __name__ == "__main__":
 ขั้นตอนก็ตรงไปตรงมาครับ ใช้ _thread เพื่อเรียกใช้งานตัว Web Server จากนั้นก็โหลดเอาตัว QWebView ซึ่งทำหน้าที่เหมือน Browser ขึ้นมา แค่นี้เราก็สามารถพัฒนา Desktop App ง่ายๆ ได้แล้วครับ ส่วนจะ Build ให้เป็น .exe ยังไงนั้นก็ขอแนะนำให้ใช้ cx_freeze ครับ อันนี้ก็เลียนแบบของคนอื่นมาอีกที
 
 ```python
+# setup.py
 import sys
 from cx_Freeze import setup, Executable
 
@@ -71,4 +73,8 @@ setup(  name = "guifoo",
         description = "My GUI application!",
         options = {"build_exe": build_exe_options},
         executables = [Executable("webshow_flask.py", base=base)])
+```
+
+```
+python setup.py build
 ```
