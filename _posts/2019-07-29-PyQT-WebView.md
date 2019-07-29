@@ -51,4 +51,24 @@ if __name__ == "__main__":
 
 ```
 
-ขั้นตอนก็ตรงไปตรงมาครับ ใช้ _thread เพื่อเรียกใช้งานตัว Web Server จากนั้นก็โหลดเอาตัว QWebView ซึ่งทำหน้าที่เหมือน Browser ขึ้นมา แค่นี้เราก็สามารถพัฒนา Desktop App ง่ายๆ ได้แล้วครับ
+ขั้นตอนก็ตรงไปตรงมาครับ ใช้ _thread เพื่อเรียกใช้งานตัว Web Server จากนั้นก็โหลดเอาตัว QWebView ซึ่งทำหน้าที่เหมือน Browser ขึ้นมา แค่นี้เราก็สามารถพัฒนา Desktop App ง่ายๆ ได้แล้วครับ ส่วนจะ Build ให้เป็น .exe ยังไงนั้นก็ขอแนะนำให้ใช้ cx_freeze ครับ อันนี้ก็เลียนแบบของคนอื่นมาอีกที
+
+```python
+import sys
+from cx_Freeze import setup, Executable
+
+# Dependencies are automatically detected, but it might need fine tuning.
+build_exe_options = {"packages": ["sys"], "excludes": ["tkinter"]}
+
+# GUI applications require a different base on Windows (the default is for a
+# console application).
+base = None
+if sys.platform == "win32":
+    base = "Win32GUI"
+
+setup(  name = "guifoo",
+        version = "0.1",
+        description = "My GUI application!",
+        options = {"build_exe": build_exe_options},
+        executables = [Executable("webshow_flask.py", base=base)])
+```
