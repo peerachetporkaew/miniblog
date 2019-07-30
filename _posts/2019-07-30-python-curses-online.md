@@ -36,7 +36,6 @@ curses.init_pair(1, curses.COLOR_RED, -1)
 def main(stdscr):
 
     for i in range(0, 11):
-        v = i-10
         stdscr.addstr(0,i,"Pretty text",curses.color_pair(1) | curses.A_BOLD)
         stdscr.refresh()
         time.sleep(0.5)
